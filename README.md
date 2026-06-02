@@ -16,6 +16,14 @@ npm run dev
 Endpoints:
 - `GET /health` — simple health check
 
+Authentication & user CRUD:
+- `POST /api/auth/register` — register a new user
+- `POST /api/auth/login` — login and receive a JWT
+- `GET /api/users` — list users (requires `Authorization: Bearer <token>`)
+- `GET /api/users/:id` — get a user by ID
+- `PUT /api/users/:id` — update a user
+- `DELETE /api/users/:id` — delete a user
+
 Optional with Docker:
 
 ```bash
