@@ -17,12 +17,18 @@ Endpoints:
 - `GET /health` — simple health check
 
 Authentication & user CRUD:
-- `POST /api/auth/register` — register a new user
-- `POST /api/auth/login` — login and receive a JWT
-- `GET /api/users` — list users (requires `Authorization: Bearer <token>`)
+- `POST /api/auth/register` — register a new user and receive a verification email
+- `GET /api/auth/verify?token=<token>` — verify email
+- `POST /api/auth/login` — login and receive a JWT (only after email is verified)
+- `GET /api/users` — list users (requires `Authorization: Bearer <token>`, admin only)
 - `GET /api/users/:id` — get a user by ID
 - `PUT /api/users/:id` — update a user
 - `DELETE /api/users/:id` — delete a user
+- `GET /api/admin/users` — list all users (admin only)
+- `PUT /api/admin/users/:id/role` — change user role (admin only)
+
+Deployment from GitHub:
+- `/.github/workflows/deploy.yml` builds the Docker image and pushes it to GitHub Container Registry on `main`
 
 Optional with Docker:
 

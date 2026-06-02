@@ -5,5 +5,6 @@ const { validateRegister, validateLogin } = require('../validators/authValidator
 
 router.post('/register', validateRegister, authController.register);
 router.post('/login', validateLogin, authController.login);
+router.get('/verify', authController.verifyEmail);
 
 module.exports = router;

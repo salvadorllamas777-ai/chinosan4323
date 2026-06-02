@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const usersController = require('../controllers/usersController');
 const auth = require('../middleware/auth');
-const { validateUser, validateUserUpdate } = require('../validators/usersValidator');
+const { validateUserUpdate } = require('../validators/usersValidator');
 
 router.use(auth);
 
