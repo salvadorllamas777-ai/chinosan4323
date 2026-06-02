@@ -1,5 +1,7 @@
 # proyecto2 — Node + MongoDB scaffold
 
+Repo: https://github.com/salvadorllamas777-ai/chinosan4323
+
 Minimal scaffold with Express and Mongoose.
 
 Quick start:
