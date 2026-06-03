@@ -30,6 +30,17 @@ Authentication & user CRUD:
 Deployment from GitHub:
 - `/.github/workflows/deploy.yml` builds the Docker image and pushes it to GitHub Container Registry on `main`
 
+Deploy to Render (free):
+1. Create a free account on [render.com](https://render.com)
+2. Connect your GitHub repository
+3. Create a new Web Service and select this repository
+4. Render will auto-detect `render.yaml` and deploy
+5. Set environment variables in Render dashboard:
+   - `MONGO_URI`
+   - `JWT_SECRET`
+   - `APP_URL` (your Render app URL)
+   - `EMAIL_*` (email service credentials)
+
 Optional with Docker:
 
 ```bash
