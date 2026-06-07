@@ -24,6 +24,13 @@ exports.register = async (req, res) => {
 
     await sendVerificationEmail(user, verificationUrl);
 
+    // In development/test, auto-verify the user to simplify local workflows
+    if ((process.env.NODE_ENV || 'development') !== 'production') {
+      user.verified = true;
+      user.verificationToken = undefined;
+      await user.save();
+    }
+
     const userData = user.toJSON ? user.toJSON() : { ...user };
     delete userData.password;
 
