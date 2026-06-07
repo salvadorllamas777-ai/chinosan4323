@@ -1,4 +1,5 @@
-.config/
-.vscode/
-node_modules/
-CachedExtensionVSIXs/
+node_modules
+.env
+.env.local
+dist
+.DS_Store
