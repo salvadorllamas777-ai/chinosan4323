@@ -47,6 +47,12 @@ Optional with Docker:
 docker-compose up --build
 ```
 
+Local development without MongoDB:
+
+- When `NODE_ENV` is `development` or `test`, the app will automatically start using an in-memory MongoDB instance if `MONGO_URI` is not reachable.
+- This fallback is intended for development/test convenience, but it can fail on some Linux/CPU environments due to MongoDB binary compatibility (for example, AVX requirements).
+- If `npm run dev` does not start, run a local MongoDB server or set `MONGO_URI` to a hosted MongoDB instance.
+
 CI status
 ----------
 
