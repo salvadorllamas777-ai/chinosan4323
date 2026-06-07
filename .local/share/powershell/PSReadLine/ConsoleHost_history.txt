@@ -1,0 +1,48 @@
+$PSVersionTable
+Get-ChildItem
+Get-Process
+exit
+node -v
+npm -v
+& "$HOME/.local/share/fnm/fnm" env --shell powershell | Invoke-Expression
+node -v
+npm -v
+exit
+node -v
+npm -v
+
+npm install
+cp .env.example .env
+# adjust .env if needed
+npm run dev
+```
+npm install && npm test --silent
+cd ~
+mkdir mi-proyecto-node
+cd mi-proyecto-node
+npm init -y
+npm install nombre-del-paquete
+npm install proyecto2
+ssh usuario@ip_de_la_computadora_linux
+ssh 
+ssh usuario@ip_de_la_computadora_linux
+
+
+npm install mongodb
+# instala gh si no lo tienes, luego:
+gh auth login
+npm install
+npm run dev
+gh repo create OWNER/REPO --public --source=. --remote=origin --push
+npm install
+cp .env.example .env
+# adjust .env if needed
+npm run dev
+npm install
+cp .env.example .env
+# adjust .env if needed
+npm run dev
+npm run
+npm run start
+cp .env.example .env
+docker-compose up --build
